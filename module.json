@@ -1,0 +1,22 @@
+{
+	"name" : "starfinder-automation-module",
+	"title" : "StarFinder Automation Module",
+	"description" : "Quick Automation for the StarFinder System",
+	"author" : "Kekilla#7036",
+	"version" : "",
+	"minimumCoreVersion" : "0.8.0",
+	"compatibleCoreVersion": "0.8.6",
+	"esmodules" : ["scripts/hooks.js"],
+	"systems" : ["sfrpg"],
+	"languages" : [
+		{
+			"lang" : "en",
+			"name" : "English",
+			"path" : "lang/en.json"
+		}
+	],
+  "socket" : true,
+	"url" : "",
+	"manifest" : "",
+	"download" : ""
+}
