@@ -7,9 +7,12 @@ Hooks.on('ready', helper.register);
 
 /**
  * Known Issues :
+ *  rollDamage & rollAttack do not return values
  * 
  * Fixes :
- * 
+ *   
+ *  
  * Ideas :
+ *  coverCheck
  * 
  */

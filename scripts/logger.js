@@ -10,5 +10,6 @@ export class logger {
   }
   static error(...args) {
     console.error(`${settings?.data?.title || "" } | ERROR | `, ...args);
+    ui.notifications.error(`${settings?.data?.title || ""} | ERROR | Check console (f12) for error message.`);
   }
 }
