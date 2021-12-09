@@ -1,3 +1,4 @@
 {
-  
+  "setting.logger.debug.name" : "Debug Output",
+  "setting.logger.debug.hint" : "Enabled, this will flood console with debug data."
 }

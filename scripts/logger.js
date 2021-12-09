@@ -1,15 +1,34 @@
-import { settings } from './settings.js';
+import { MODULE } from './module.js'
 
-export class logger {
+export class LOGGER {
   static info(...args) {
-    console.log(`${settings?.data?.title || "" }  | `, ...args);
+    console.log(`${MODULE?.data?.title || "" }  | `, ...args);
   }
   static debug(...args) {
-    if (settings.value('debug'))
+    if (MODULE.setting('logger.debug'))
       this.info("DEBUG | ", ...args);
   }
   static error(...args) {
-    console.error(`${settings?.data?.title || "" } | ERROR | `, ...args);
-    ui.notifications.error(`${settings?.data?.title || ""} | ERROR | Check console (f12) for error message.`);
+    console.error(`${MODULE?.data?.title || "" } | ERROR | `, ...args);
+    ui.notifications.error(`${MODULE?.data?.title || "" } | ERROR | ${args[0]}`);
+  }
+
+  static notify(...args) {
+    ui.notifications.notify(`${args[0]}`);
+  }
+
+  static register(){
+    this.settings();
+  }
+
+  static settings(){
+    const config = true;
+    const settingsData = {
+      ["logger.debug"] : {
+        scope: "world", config, default: false, type: Boolean,
+      },
+    };
+
+    MODULE.applySettings(settingsData);
   }
 }
